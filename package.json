@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "compression": "^1.7.1",
+    "express": "^4.16.2",
+    "next": "^4.1.2",
+    "next-routes": "^1.1.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "name": "nextjs-real-world",
+  "version": "1.0.0",
+  "main": "server/index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ian Wang <gogoenwon@gmail.com> (https://github.com/IanWang)",
+  "license": "ISC",
+  "description": ""
+}
