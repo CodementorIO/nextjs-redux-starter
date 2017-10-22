@@ -10,9 +10,13 @@
   "name": "nextjs-real-world",
   "version": "1.0.0",
   "main": "server/index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "next build",
+    "start": "nodemon -w server server/index.js"
   },
   "author": "Ian Wang <gogoenwon@gmail.com> (https://github.com/IanWang)",
   "license": "ISC",
