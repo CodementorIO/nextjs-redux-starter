@@ -1,0 +1,11 @@
+{
+  "presets": [
+    "env",
+    "next/babel"
+  ],
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./src"]
+    }]
+  ]
+}
