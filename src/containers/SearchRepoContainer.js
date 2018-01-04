@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 
 import config from 'config'
 import { getTopRepos } from 'actions/repos'
-import SearchResults from 'components/SeachResults'
+import SearchResults from 'components/SearchResults'
 
 class SearchRepoContainer extends Component {
 

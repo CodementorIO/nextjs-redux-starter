@@ -1,12 +1,13 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
+import styles from 'styles/SearchResults.css'
 
 const REPO_COUNT = 10
 const SearchResults = ({ repos }) => {
   return (
-    <Fragment>
+    <div className='container'>
       <h2>Top { REPO_COUNT } { repos.get('lang') } repos</h2>
-      <small>{ repos.get('totalCount').toLocaleString() } found</small>
+      <small>{ repos.get('totalCount').toLocaleString() } repos found</small>
       <ul>
         {
           repos.get('items').take(REPO_COUNT).map(item => (
@@ -18,7 +19,8 @@ const SearchResults = ({ repos }) => {
           ))
         }
       </ul>
-    </Fragment>
+      <style jsx>{styles}</style>
+    </div>
   )
 }
 
