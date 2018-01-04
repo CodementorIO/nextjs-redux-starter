@@ -1,4 +1,5 @@
 import React from 'react'
+import { Map } from 'immutable'
 import PropTypes from 'prop-types'
 import styles from 'styles/SearchResults.css'
 
@@ -12,7 +13,7 @@ const SearchResults = ({ repos }) => {
         {
           repos.get('items').take(REPO_COUNT).map(item => (
             <li key={item.get('id')}>
-              <a href={item.get('url')} target='_blank'>
+              <a href={item.get('htmlUrl')} target='_blank'>
                 { item.get('name') }
               </a>
             </li>

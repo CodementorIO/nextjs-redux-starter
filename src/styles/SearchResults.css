@@ -1,4 +1,5 @@
 .container {
-  text-align: center;
+  width: 300px;
   padding: 1em;
+  margin: 0 auto;
 }
