@@ -10,7 +10,12 @@
     "next": "4.2.0",
     "next-redux-wrapper": "^1.3.5",
     "next-routes": "^1.1.0",
+    "normalize.css": "^7.0.0",
+    "postcss-assets": "^5.0.0",
+    "postcss-import": "^11.0.0",
     "postcss-loader": "^2.0.10",
+    "postcss-nested": "^3.0.0",
+    "postcss-nested-ancestors": "^1.0.0",
     "prop-type": "^0.0.1",
     "react": "16.2.0",
     "react-dom": "16.2.0",
@@ -38,7 +43,8 @@
     "build": "next build",
     "test:ci": "jest --maxWorkers=2 --ci",
     "test": "jest --watch",
-    "start": "nodemon -w server server/index.js"
+    "start": "nodemon -w server server/index.js",
+    "clean": "rm -rf node_modules/.cache .next"
   },
   "jest": {
     "modulePaths": [

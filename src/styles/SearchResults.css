@@ -2,4 +2,7 @@
   width: 300px;
   padding: 1em;
   margin: 0 auto;
+  li {
+    background: #eee;
+  }
 }
