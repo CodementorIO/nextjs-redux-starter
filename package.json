@@ -26,13 +26,28 @@
   "version": "1.0.0",
   "main": "server/index.js",
   "devDependencies": {
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest": "^22.1.2",
     "nodemon": "^1.12.1",
+    "raf": "^3.4.0",
+    "react-test-renderer": "^16.2.0",
     "webpack-bundle-analyzer": "^2.9.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "next build",
+    "test:ci": "jest --maxWorkers=2 --ci",
+    "test": "jest --watch",
     "start": "nodemon -w server server/index.js"
+  },
+  "jest": {
+    "modulePaths": [
+      "./src"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "<rootDir>/src/test/__mocks__/styleMock.js"
+    },
+    "setupTestFrameworkScriptFile": "<rootDir>/src/test/jest.setup.js"
   },
   "author": "Ian Wang <gogoenwon@gmail.com> (https://github.com/IanWang)",
   "license": "ISC",
