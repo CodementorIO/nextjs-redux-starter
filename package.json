@@ -27,7 +27,7 @@
     "styled-jsx-css-loader": "^0.3.0",
     "uglifyjs-webpack-plugin": "^1.1.5"
   },
-  "name": "nextjs-real-world",
+  "name": "nextjs-redux-starter",
   "version": "1.0.0",
   "main": "server/index.js",
   "devDependencies": {
@@ -57,5 +57,5 @@
   },
   "author": "Ian Wang <gogoenwon@gmail.com> (https://github.com/IanWang)",
   "license": "ISC",
-  "description": ""
+  "description": "Next.js with Express, Redux, PostCSS, and Jest."
 }
