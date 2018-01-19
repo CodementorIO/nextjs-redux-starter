@@ -19,7 +19,7 @@ describe('Components::SearchResults', () => {
     }
   })
 
-  function renderDoc() {
+  function renderDoc () {
     return shallow(<SearchResults {...props} />)
   }
 

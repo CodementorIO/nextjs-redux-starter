@@ -7,13 +7,12 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import config from 'config'
 import rootReducer from '../reducers'
 
-function createMiddlewares({ isServer }) {
-
+function createMiddlewares ({ isServer }) {
   let middlewares = [
-    thunkMiddleware,
+    thunkMiddleware
   ]
 
-  if(config.env === 'development' && typeof window !== 'undefined') {
+  if (config.env === 'development' && typeof window !== 'undefined') {
     middlewares.push(createLogger({
       level: 'info',
       collapsed: true,
@@ -36,7 +35,7 @@ function createMiddlewares({ isServer }) {
   return middlewares
 }
 
-function immutableChildren(obj) {
+function immutableChildren (obj) {
   let state = {}
   Object.keys(obj).map((key) => {
     state[key] = Immutable.fromJS(obj[key])
@@ -45,7 +44,6 @@ function immutableChildren(obj) {
 }
 
 export const initStore = (initialState = {}, context) => {
-
   let { isServer } = context
   let middlewares = createMiddlewares({ isServer })
   let state = immutableChildren(initialState)

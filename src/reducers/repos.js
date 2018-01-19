@@ -6,9 +6,8 @@ export const initialState = Immutable.fromJS({
   lang: ''
 })
 
-export default function(state = initialState, action) {
+export default function (state = initialState, action) {
   switch (action.type) {
-
     case ActionType.GET_TOP_REPOS:
       return state.set('isLoading', true)
 

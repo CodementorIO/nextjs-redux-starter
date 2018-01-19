@@ -3,30 +3,26 @@ import PropTypes from 'prop-types'
 import { Map } from 'immutable'
 import { connect } from 'react-redux'
 
-import config from 'config'
 import { getTopRepos } from 'actions/repos'
 import SearchResults from 'components/SearchResults'
 
 class SearchRepoContainer extends Component {
-
   static async getInitialProps ({ store, query }) {
-
     let lang = query.lang || 'javascript'
     await store.dispatch(getTopRepos({ lang }))
   }
 
-  componentDidMount() {
+  componentDidMount () {
     let { getTopRepos } = this.props
     getTopRepos({ lang: 'ruby' })
   }
 
-  render() {
+  render () {
     let { repos } = this.props
     return (
       <SearchResults repos={repos} />
     )
   }
-
 }
 
 function mapStateToProps (state) {

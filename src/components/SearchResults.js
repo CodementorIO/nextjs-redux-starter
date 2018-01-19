@@ -26,7 +26,7 @@ const SearchResults = ({ repos }) => {
 }
 
 SearchResults.propTypes = {
-  repos: PropTypes.instanceOf(Map).isRequired,
+  repos: PropTypes.instanceOf(Map).isRequired
 }
 
 export default SearchResults

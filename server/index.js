@@ -1,5 +1,4 @@
 
-const path = require('path')
 const express = require('express')
 const compression = require('compression')
 const next = require('next')
@@ -13,7 +12,6 @@ const app = next({ dev })
 const handler = routes.getRequestHandler(app)
 
 app.prepare().then(() => {
-
   const server = express()
 
   server.use(compression())
@@ -23,7 +21,7 @@ app.prepare().then(() => {
 
   startServer()
 
-  function startServer() {
+  function startServer () {
     server.listen(port, () => {
       console.log(`> Ready on http://localhost:${port}`)
     })
