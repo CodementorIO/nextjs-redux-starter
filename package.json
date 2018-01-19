@@ -68,7 +68,9 @@
     },
     "setupTestFrameworkScriptFile": "<rootDir>/src/test/jest.setup.js"
   },
+  "repository": "CodementorIO/nextjs-redux-starter",
+  "bugs": "https://github.com/CodementorIO/nextjs-redux-starter/issues",
   "author": "Ian Wang <gogoenwon@gmail.com> (https://github.com/IanWang)",
   "license": "ISC",
-  "description": "An opinionated Next.js with Express, Redux, PostCSS, and Jest."
+  "description": "Opinionated Next.js starter with Express, Redux, PostCSS, and Jest."
 }
