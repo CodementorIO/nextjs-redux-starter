@@ -12,3 +12,53 @@ Next.js is an awesome and minimalistic framework to make a modern universal reac
 - Linting with [standard](https://github.com/standard/standard)
 - [react-helmet](https://github.com/nfl/react-helmet), [Immutable.js
 ](https://github.com/facebook/immutable-js/), [dotenv](https://github.com/motdotla/dotenv), and more...
+
+## Getting started
+```
+git clone https://github.com/CodementorIO/nextjs-redux-starter my-project
+cd my-project
+yarn install
+yarn start
+```
+
+Then open `http://localhost:3100/` to see your app.
+
+## Structure overview
+```
+├── README.md
+├── next.config.js
+├── package.json
+├── pages
+│   ├── _document.js
+│   ├── about.js
+│   └── index.js
+├── postcss.config.js
+├── routes.js
+├── server
+│   └── index.js
+├── src
+│   ├── actions
+│   │   └── repos.js
+│   ├── components
+│   │   └── SearchResults.js
+│   ├── config.js
+│   ├── containers
+│   │   └── SearchRepoContainer.js
+│   ├── libs
+│   │   └── github.js
+│   ├── reducers
+│   │   ├── index.js
+│   │   └── repos.js
+│   ├── store
+│   │   └── createStore.js
+│   ├── styles
+│   │   ├── SearchResults.css
+│   │   └── base.css
+│   └── test
+│       ├── __mocks__
+│       │   └── styleMock.js
+│       ├── components
+│       │   └── SearchResults.test.js
+│       └── jest.setup.js
+└── yarn.lock
+```
