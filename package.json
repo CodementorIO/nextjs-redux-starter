@@ -2,6 +2,7 @@
   "dependencies": {
     "axios": "^0.17.1",
     "babel-plugin-module-resolver": "^3.0.0",
+    "babel-plugin-transform-inline-environment-variables": "^0.2.0",
     "babel-preset-env": "^1.6.1",
     "compression": "^1.7.1",
     "express": "^4.16.2",
@@ -31,22 +32,25 @@
   "version": "1.0.0",
   "main": "server/index.js",
   "devDependencies": {
+    "babel-plugin-inline-dotenv": "^1.1.2",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "jest": "^22.1.2",
     "nodemon": "^1.12.1",
     "raf": "^3.4.0",
     "react-test-renderer": "^16.2.0",
+    "rimraf": "^2.6.2",
     "snazzy": "^7.0.0",
     "standard": "^10.0.3",
     "webpack-bundle-analyzer": "^2.9.1"
   },
   "scripts": {
-    "build": "next build",
+    "build": "NODE_ENV=production next build",
     "test:ci": "jest --maxWorkers=2 --ci",
     "test": "jest --watch",
     "start": "nodemon -w server server/index.js",
-    "clean": "rm -rf node_modules/.cache .next",
+    "serve": "NODE_ENV=production node server/index.js",
+    "clean": "rimraf node_modules/.cache .next",
     "lint": "standard --verbose | snazzy",
     "lint-fix": "standard --fix --verbose | snazzy"
   },
