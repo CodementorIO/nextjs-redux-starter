@@ -8,23 +8,7 @@ module.exports = {
   webpack: (config, { dev }) => {
     config.output.publicPath = `${assetPrefix}${config.output.publicPath}`
 
-    // https://github.com/zeit/next.js/issues/3184
-    config.plugins = config.plugins.filter(p =>
-      p.constructor.name !== 'UglifyJsPlugin'
-    )
-
-    if (!dev) {
-      const Uglify = require('uglifyjs-webpack-plugin')
-      config.plugins.push(
-        new Uglify({
-          parallel: true,
-          cache: true,
-          sourceMap: true
-        })
-      )
-    }
-
-    if (ANALYZE) {
+   if (ANALYZE) {
       const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
       config.plugins.push(new BundleAnalyzerPlugin({
         analyzerMode: 'server',
