@@ -18,7 +18,7 @@ module.exports = {
     }
 
     config.module.rules.push({
-      test: /\.css/,
+      test: /\.scss/,
       use: [{
         loader: 'emit-file-loader',
         options: {
@@ -27,7 +27,7 @@ module.exports = {
       },
         'babel-loader',
         'styled-jsx-css-loader', {
-          loader: 'postcss-loader',
+          loader: 'sass-loader',
           options: { sourceMap: dev }
         }]
     })

@@ -5,4 +5,10 @@
   li {
     background: #eee;
   }
+
+  $hover-color: #f9f9f9;
+
+  &:hover {
+    background: $hover-color;
+  }
 }
