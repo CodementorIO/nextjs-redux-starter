@@ -44,7 +44,7 @@ export default class extends Document {
           { this.helmetHeadComponents }
         </Head>
         <body {...this.helmetBodyAttrComponents}>
-          <style jsx global>{styles}</style>
+          <style>{styles}</style>
           <Main />
           <NextScript />
         </body>
