@@ -20,28 +20,7 @@ class SearchRepoContainer extends Component {
   render () {
     let { repos } = this.props
     return (
-      <div>
-        <header>
-          <img src='/static/next-logo.png' />
-          <h3>nextjs redux starter</h3>
-        </header>
-        <SearchResults repos={repos} />
-
-        <style jsx>{`
-          header {
-            display: flex;
-            align-items: center;
-            font-family: Monospace;
-            margin: 10px 20px;
-          }
-          h3 {
-            margin-left: 10px
-          }
-          img {
-            width: 30px;
-          }
-        `}</style>
-      </div>
+      <SearchResults repos={repos} />
     )
   }
 }

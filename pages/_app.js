@@ -1,5 +1,6 @@
 import { withRouter } from 'next/router'
 import App, { Container } from 'next/app'
+import Layout from 'components/Layout'
 
 class MyApp extends App {
   render () {
@@ -12,7 +13,9 @@ class MyApp extends App {
     }
     return (
       <Container>
-        <Component {...pageProps} url={url} />
+        <Layout>
+          <Component {...pageProps} url={url} />
+        </Layout>
       </Container>
     )
   }
