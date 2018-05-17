@@ -1,4 +1,5 @@
 
+const path = require('path')
 const express = require('express')
 const compression = require('compression')
 const next = require('next')
@@ -15,6 +16,13 @@ app.prepare().then(() => {
   const server = express()
 
   server.use(compression())
+
+  const staticPath = path.join(__dirname, '../static')
+  server.use('/static', express.static(staticPath, {
+    maxAge: '30d',
+    immutable: true
+  }))
+
   server.get('*', (req, res) => {
     return handler(req, res)
   })
