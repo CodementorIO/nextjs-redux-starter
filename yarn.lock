@@ -4932,9 +4932,9 @@ next-redux-wrapper@^1.3.5:
   dependencies:
     object.assign "^4.0.4"
 
-next-routes@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/next-routes/-/next-routes-1.4.1.tgz#740e3c02c4c0435ce68a5c6f877412fe8686402b"
+next-routes@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/next-routes/-/next-routes-1.4.2.tgz#736a382579a792ea69f35ae70b449acdfefa7944"
   dependencies:
     path-to-regexp "^2.1.0"
 
