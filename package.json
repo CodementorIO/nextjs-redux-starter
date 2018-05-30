@@ -5,6 +5,7 @@
     "babel-plugin-module-resolver": "^3.0.0",
     "compression": "^1.7.1",
     "express": "^4.16.2",
+    "helmet": "^3.12.1",
     "humps": "^2.0.1",
     "immutable": "^3.8.2",
     "next": "^6.0.3",
