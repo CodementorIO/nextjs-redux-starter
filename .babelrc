@@ -1,6 +1,5 @@
 {
   "presets": [
-    "@babel/preset-env",
     "next/babel"
   ],
   "plugins": [
@@ -8,5 +7,16 @@
     ["module-resolver", {
       "root": ["./src"]
     }]
-  ]
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        ["next/babel", {
+           "preset-env": {
+              "modules": "commonjs"
+            }
+        }]
+      ]
+    }
+  }
 }
