@@ -50,6 +50,7 @@
     "serve": "NODE_ENV=production node server/index.js",
     "clean": "rimraf node_modules/.cache .next",
     "lint": "standard --verbose | snazzy",
+    "now-start": "yarn serve",
     "lint-fix": "standard --fix --verbose | snazzy"
   },
   "standard": {
