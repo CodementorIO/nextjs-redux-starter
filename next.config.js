@@ -25,11 +25,11 @@ module.exports = {
           name: 'dist/[path][name].[ext]'
         }
       },
-        'babel-loader',
-        'styled-jsx-css-loader', {
-          loader: 'sass-loader',
-          options: { sourceMap: dev }
-        }]
+      'babel-loader',
+      'styled-jsx-css-loader', {
+        loader: 'sass-loader',
+        options: { sourceMap: dev }
+      }]
     })
 
     return config
