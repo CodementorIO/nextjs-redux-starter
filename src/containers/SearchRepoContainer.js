@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { Map } from 'immutable'
 import { connect } from 'react-redux'
@@ -20,8 +20,17 @@ class SearchRepoContainer extends Component {
   render () {
     let { repos } = this.props
     return (
-      <SearchResults repos={repos} />
+      <Fragment>
+        <div onClick={this._goToAbout}>
+          GO TO ABOUT (with <code>router</code>)
+        </div>
+        <SearchResults repos={repos} />
+      </Fragment>
     )
+  }
+
+  _goToAbout = () => {
+    this.props.router.push('/about')
   }
 }
 

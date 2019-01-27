@@ -1,7 +1,6 @@
 import Immutable from 'immutable'
 import thunkMiddleware from 'redux-thunk'
 import { createLogger } from 'redux-logger'
-import withRedux from 'next-redux-wrapper'
 import { createStore, applyMiddleware, compose } from 'redux'
 
 import config from 'config'
@@ -43,7 +42,7 @@ function immutableChildren (obj) {
   return state
 }
 
-export const initStore = (initialState = {}, context) => {
+export default (initialState = {}, context) => {
   let { isServer } = context
   let middlewares = createMiddlewares({ isServer })
   let state = immutableChildren(initialState)
@@ -54,5 +53,3 @@ export const initStore = (initialState = {}, context) => {
     compose(applyMiddleware(...middlewares))
   )
 }
-
-export default (comp) => withRedux(initStore)(comp)
