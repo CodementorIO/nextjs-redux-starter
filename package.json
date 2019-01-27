@@ -35,7 +35,9 @@
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.8.0",
     "jest": "^24.0.0",
+    "lint-staged": "^8.1.0",
     "nodemon": "^1.12.1",
+    "pre-commit": "^1.2.2",
     "raf": "^3.4.0",
     "react-test-renderer": "^16.2.0",
     "rimraf": "^2.6.2",
@@ -44,6 +46,7 @@
     "webpack-bundle-analyzer": "^3.0.2"
   },
   "scripts": {
+    "lint-staged": "lint-staged",
     "build": "NODE_ENV=production next build",
     "test:ci": "jest --maxWorkers=2 --ci",
     "test": "jest --watch",
@@ -52,7 +55,14 @@
     "clean": "rimraf node_modules/.cache .next",
     "lint": "standard --verbose | snazzy",
     "now-start": "yarn serve",
-    "lint-fix": "standard --fix --verbose | snazzy"
+    "lint:fix": "standard --fix --verbose | snazzy"
+  },
+  "pre-commit": "lint-staged",
+  "lint-staged": {
+    "*.js": [
+      "yarn lint:fix",
+      "git add"
+    ]
   },
   "standard": {
     "parser": "babel-eslint",
@@ -70,7 +80,9 @@
     "moduleNameMapper": {
       "\\.(css|scss)$": "<rootDir>/src/test/__mocks__/styleMock.js"
     },
-    "setupFilesAfterEnv": ["<rootDir>/src/test/jest.setup.js"]
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/test/jest.setup.js"
+    ]
   },
   "repository": "CodementorIO/nextjs-redux-starter",
   "bugs": "https://github.com/CodementorIO/nextjs-redux-starter/issues",
