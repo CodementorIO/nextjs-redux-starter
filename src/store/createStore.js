@@ -36,7 +36,7 @@ function createMiddlewares ({ isServer }) {
 
 function immutableChildren (obj) {
   let state = {}
-  Object.keys(obj).map((key) => {
+  Object.keys(obj).forEach((key) => {
     state[key] = Immutable.fromJS(obj[key])
   })
   return state
