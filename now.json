@@ -1,0 +1,13 @@
+{
+  "name": "nextjs-redux-starter",
+  "public": true,
+  "version": 2,
+  "builds": [{
+    "src": "next.config.js",
+    "use": "@now/next"
+  }],
+  "alias": "nextjs-redux-starter.now.sh",
+  "env": {
+    "GITHUB_API_ENDPOINT": "https://api.github.com"
+  }
+}
