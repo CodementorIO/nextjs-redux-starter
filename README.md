@@ -23,6 +23,15 @@ yarn start
 
 Then open `http://localhost:3100/` to see your app.
 
+### Deployment
+After `npm run build` finished, run
+
+```
+yarn serve
+```
+
+If you prefer using `now`, just modify `now.json` config.
+
 ## Structure overview
 ```
 ├── README.md
