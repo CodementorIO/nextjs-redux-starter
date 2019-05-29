@@ -1,16 +1,16 @@
 # Next.js redux starter
-An opinionated Next.js starter kit with Express, Redux, styled-components, and Jest.
+An opinionated Next.js starter kit with Express, Redux, styled-components, and react-testing-library.
 
 ## About
 Next.js is an awesome and minimalistic framework to make a modern universal react app. However, there're times that we need a bit more features to build a complex SPA. That's why this project is born.
 
 ## Features
-- Dynamic routing with [express](https://github.com/expressjs/express) and [next-routes](https://github.com/fridays/next-routes).
-- State management with [redux](https://github.com/reactjs/redux), [react-redux](https://github.com/reactjs/react-redux), and [next-redux-wrapper](https://github.com/kirill-konshin/next-redux-wrapper)
-- Styling with [styled-components](https://github.com/styled-components)
-- Unit testing with [jest](https://github.com/facebook/jest)
-- Linting with [standard](https://github.com/standard/standard)
-- [react-helmet](https://github.com/nfl/react-helmet), [Immutable.js
+- 🚄 Dynamic routing with [express](https://github.com/expressjs/express) and [next-routes](https://github.com/fridays/next-routes).
+- 🗄  State management with [redux](https://github.com/reactjs/redux), [react-redux](https://github.com/reactjs/react-redux), and [next-redux-wrapper](https://github.com/kirill-konshin/next-redux-wrapper)
+- 💅 Styling with [styled-components](https://github.com/styled-components/styled-components)
+- 🐐 Unit testing with [react-testing-library](https://github.com/testing-library/react-testing-library)
+- 🛀 Linting staged changes on [pre-commit](https://github.com/pre-commit/pre-commit) with [standard](https://github.com/standard/standard)
+- ⛑ [react-helmet](https://github.com/nfl/react-helmet), [Immutable.js
 ](https://github.com/facebook/immutable-js/), [dotenv](https://github.com/motdotla/dotenv), and more...
 
 ## Getting started
@@ -63,6 +63,6 @@ If you prefer using `now`, just modify `now.json` config.
 │   └── test
 │       ├── components
 │       │   └── SearchResults.test.js
-│       └── jest.setup.js
+│       └── test-utils.js
 └── yarn.lock
 ```

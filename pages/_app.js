@@ -6,15 +6,11 @@ import { Provider } from 'react-redux'
 import App, { Container } from 'next/app'
 import Layout from 'components/Layout'
 import createStore from 'store/createStore'
+import theme from 'theme'
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
 `
-const theme = {
-  colors: {
-    primary: '#003648'
-  }
-}
 
 class MyApp extends App {
   static async getInitialProps ({ Component, ctx }) {

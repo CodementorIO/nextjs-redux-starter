@@ -1,6 +1,6 @@
 import React from 'react'
 import Immutable from 'immutable'
-import { shallow } from 'enzyme'
+import { render } from 'test-utils'
 import SearchResults from 'components/SearchResults'
 
 describe('Components::SearchResults', () => {
@@ -11,21 +11,30 @@ describe('Components::SearchResults', () => {
         lang: 'lang',
         totalCount: 2,
         items: [{
-          id: 1
+          id: 1,
+          name: 'repo 1',
+          htmlUrl: 'url 1'
         }, {
-          id: 2
+          id: 2,
+          name: 'repo 2',
+          htmlUrl: 'url 2'
         }]
       })
     }
   })
 
-  function renderDoc () {
-    return shallow(<SearchResults {...props} />)
+  const setup = () => {
+    const utils = render(<SearchResults {...props} />)
+    return utils
   }
 
   it('renders all items', () => {
-    let doc = renderDoc()
-    let node = doc.find('li')
-    expect(node).toHaveLength(props.repos.get('items').size)
+    let utils = setup()
+    props.repos.get('items').forEach((repo) => {
+      expect(utils.getByText(repo.get('name'))).toHaveAttribute(
+        'href',
+        repo.get('htmlUrl')
+      )
+    })
   })
 })
