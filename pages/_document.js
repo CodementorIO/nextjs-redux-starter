@@ -1,14 +1,32 @@
 import Document, { Head, Main, NextScript } from 'next/document'
+import { ServerStyleSheet } from 'styled-components'
 import Helmet from 'react-helmet'
-import styles from 'styles/base.scss'
 
 // from https://github.com/zeit/next.js/edit/canary/examples/with-react-helmet/pages/_document.js
 export default class extends Document {
-  static async getInitialProps (...args) {
-    const documentProps = await super.getInitialProps(...args)
-    // see https://github.com/nfl/react-helmet#server-usage for more information
-    // 'head' was occupied by 'renderPage().head', we cannot use it
-    return { ...documentProps, helmet: Helmet.renderStatic() }
+  static async getInitialProps (ctx) {
+    const sheet = new ServerStyleSheet()
+    const originalRenderPage = ctx.renderPage
+    try {
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: App => props => sheet.collectStyles(<App {...props} />)
+        })
+
+      const documentProps = await Document.getInitialProps(ctx)
+      return {
+        ...documentProps,
+        helmet: Helmet.renderStatic(),
+        styles: (
+          <>
+            {documentProps.styles}
+            {sheet.getStyleElement()}
+          </>
+        )
+      }
+    } finally {
+      sheet.seal()
+    }
   }
 
   get helmetHtmlAttrComponents () {
@@ -44,7 +62,6 @@ export default class extends Document {
           { this.helmetHeadComponents }
         </Head>
         <body {...this.helmetBodyAttrComponents}>
-          <style>{styles}</style>
           <Main />
           <NextScript />
         </body>

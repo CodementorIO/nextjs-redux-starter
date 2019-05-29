@@ -4,6 +4,7 @@
   ],
   "plugins": [
     "inline-dotenv",
+    "styled-components",
     ["module-resolver", {
       "root": ["./src"]
     }]
