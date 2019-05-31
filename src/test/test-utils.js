@@ -1,4 +1,4 @@
-import { render } from 'react-testing-library'
+import { render } from '@testing-library/react'
 import { ThemeProvider } from 'styled-components'
 import theme from 'theme'
 
@@ -13,5 +13,5 @@ const WithProviders = ({ children }) => {
 const customRender = (ui, options) =>
   render(ui, { wrapper: WithProviders, ...options })
 
-export * from 'react-testing-library'
+export * from '@testing-library/react'
 export { customRender as render }
