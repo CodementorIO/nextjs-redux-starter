@@ -2,7 +2,7 @@
 An opinionated Next.js starter kit with Express, Redux, styled-components, and react-testing-library.
 
 [![Build Status](https://travis-ci.org/CodementorIO/nextjs-redux-starter.svg?branch=master)](https://travis-ci.org/CodementorIO/nextjs-redux-starter)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Greenkeeper badge](https://badges.greenkeeper.io/CodementorIO/nextjs-redux-starter.svg)](https://greenkeeper.io/)
 
 ## About
 Next.js is an awesome and minimalistic framework to make a modern universal react app. However, there're times that we need a bit more features to build a complex SPA. That's why this project is born.
