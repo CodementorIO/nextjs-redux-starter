@@ -27,7 +27,7 @@
     "@babel/core": "^7.1.0",
     "@testing-library/react": "^8.0.1",
     "babel-core": "7.0.0-bridge.0",
-    "babel-eslint": "^10.0.1",
+    "babel-eslint": "^10.0.2",
     "babel-jest": "^24.0.0",
     "babel-plugin-inline-dotenv": "^1.1.2",
     "babel-plugin-module-resolver": "^3.2.0",
