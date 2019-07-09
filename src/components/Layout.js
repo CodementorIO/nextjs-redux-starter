@@ -30,7 +30,7 @@ export default class Layout extends PureComponent {
               width: 30px;
             }
             menu > a {
-              margin-left: 16px;
+              margin-right: 16px;
             }
           `}</style>
         </header>

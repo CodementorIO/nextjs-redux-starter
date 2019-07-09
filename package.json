@@ -18,7 +18,7 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "styled-components": "^4.2.0",
-    "styled-reset": "^2.0.13"
+    "styled-normalize": "^8.0.6"
   },
   "name": "nextjs-redux-starter",
   "version": "1.0.0",

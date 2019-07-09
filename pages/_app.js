@@ -1,6 +1,6 @@
 import withRedux from 'next-redux-wrapper'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
-import reset from 'styled-reset'
+import styledNormalize from 'styled-normalize'
 import { withRouter } from 'next/router'
 import { Provider } from 'react-redux'
 import App, { Container } from 'next/app'
@@ -9,7 +9,7 @@ import createStore from 'store/createStore'
 import theme from 'theme'
 
 const GlobalStyle = createGlobalStyle`
-  ${reset}
+  ${styledNormalize}
 `
 
 class MyApp extends App {
