@@ -6,12 +6,12 @@
     "helmet": "^3.12.1",
     "humps": "^2.0.1",
     "immutable": "^3.8.2",
-    "next": "^8.1.0",
+    "next": "^9.0.0",
     "next-redux-wrapper": "^2.1.0",
     "next-routes": "^1.4.2",
     "prop-types": "^15.6.1",
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
     "react-redux": "^7.0.3",
     "redux": "^4.0.1",
@@ -68,7 +68,7 @@
     ]
   },
   "engines": {
-    "node": ">= 8"
+    "node": ">= 8.12"
   },
   "jest": {
     "modulePaths": [
