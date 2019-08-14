@@ -37,7 +37,7 @@
     "nodemon": "^1.12.1",
     "pre-commit": "^1.2.2",
     "react-test-renderer": "^16.2.0",
-    "rimraf": "^2.6.2",
+    "rimraf": "^3.0.0",
     "snazzy": "^8.0.0",
     "standard": "^13.0.1",
     "webpack-bundle-analyzer": "^3.3.2"
