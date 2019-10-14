@@ -44,7 +44,7 @@ export default class extends Document {
   }
 
   get helmetJsx () {
-    let title = 'Hello next.js Real World!'
+    const title = 'Hello next.js Real World!'
     return (
       <Helmet>
         <title>{title}</title>

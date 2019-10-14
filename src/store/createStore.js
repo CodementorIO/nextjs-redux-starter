@@ -7,7 +7,7 @@ import config from 'config'
 import rootReducer from '../reducers'
 
 function createMiddlewares ({ isServer }) {
-  let middlewares = [
+  const middlewares = [
     thunkMiddleware
   ]
 
@@ -16,9 +16,9 @@ function createMiddlewares ({ isServer }) {
       level: 'info',
       collapsed: true,
       stateTransformer: (state) => {
-        let newState = {}
+        const newState = {}
 
-        for (let i of Object.keys(state)) {
+        for (const i of Object.keys(state)) {
           if (Immutable.Iterable.isIterable(state[i])) {
             newState[i] = state[i].toJS()
           } else {
@@ -35,7 +35,7 @@ function createMiddlewares ({ isServer }) {
 }
 
 function immutableChildren (obj) {
-  let state = {}
+  const state = {}
   Object.keys(obj).forEach((key) => {
     state[key] = Immutable.fromJS(obj[key])
   })
@@ -43,9 +43,9 @@ function immutableChildren (obj) {
 }
 
 export default (initialState = {}, context) => {
-  let { isServer } = context
-  let middlewares = createMiddlewares({ isServer })
-  let state = immutableChildren(initialState)
+  const { isServer } = context
+  const middlewares = createMiddlewares({ isServer })
+  const state = immutableChildren(initialState)
 
   return createStore(
     rootReducer,

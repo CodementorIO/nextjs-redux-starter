@@ -8,6 +8,7 @@ An opinionated Next.js starter kit with Express, Redux, styled-components, and r
 Next.js is an awesome and minimalistic framework to make a modern universal react app. However, there're times that we need a bit more features to build a complex SPA. That's why this project is born.
 
 ## Features
+- ▲ Based on latest [Next.js](https://github.com/zeit/next.js)
 - 🚄 Dynamic routing with [express](https://github.com/expressjs/express) and [next-routes](https://github.com/fridays/next-routes).
 - 🗄  State management with [redux](https://github.com/reactjs/redux), [react-redux](https://github.com/reactjs/react-redux), and [next-redux-wrapper](https://github.com/kirill-konshin/next-redux-wrapper)
 - 💅 Styling with [styled-components](https://github.com/styled-components/styled-components)

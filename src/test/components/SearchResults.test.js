@@ -29,7 +29,7 @@ describe('Components::SearchResults', () => {
   }
 
   it('renders all items', () => {
-    let utils = setup()
+    const utils = setup()
     props.repos.get('items').forEach((repo) => {
       expect(utils.getByText(repo.get('name'))).toHaveAttribute(
         'href',

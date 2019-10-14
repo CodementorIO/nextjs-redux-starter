@@ -8,17 +8,17 @@ import SearchResults from 'components/SearchResults'
 
 class SearchRepoContainer extends Component {
   static async getInitialProps ({ store, query }) {
-    let lang = query.lang || 'javascript'
+    const lang = query.lang || 'javascript'
     await store.dispatch(getTopRepos({ lang }))
   }
 
   componentDidMount () {
-    let { getTopRepos } = this.props
+    const { getTopRepos } = this.props
     getTopRepos({ lang: 'ruby' })
   }
 
   render () {
-    let { repos } = this.props
+    const { repos } = this.props
     return (
       <Fragment>
         <div onClick={this._goToAbout}>
