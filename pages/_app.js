@@ -1,11 +1,12 @@
-import withRedux from 'next-redux-wrapper'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
+import withRedux from 'next-redux-wrapper'
+import { Provider } from 'react-redux'
 import styledNormalize from 'styled-normalize'
 import { withRouter } from 'next/router'
-import { Provider } from 'react-redux'
 import App from 'next/app'
-import Layout from 'components/Layout'
+
 import createStore from 'store/createStore'
+import Layout from 'components/Layout'
 import theme from 'theme'
 
 const GlobalStyle = createGlobalStyle`
@@ -13,16 +14,8 @@ const GlobalStyle = createGlobalStyle`
 `
 
 class MyApp extends App {
-  static async getInitialProps ({ Component, ctx }) {
-    return {
-      pageProps: Component.getInitialProps
-        ? await Component.getInitialProps(ctx)
-        : {}
-    }
-  }
-
   render () {
-    const { Component, pageProps, store, router } = this.props
+    const { Component, pageProps, router, store } = this.props
     return (
       <ThemeProvider theme={theme}>
         <Provider store={store}>

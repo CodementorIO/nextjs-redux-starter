@@ -6731,10 +6731,10 @@ neo-async@^2.6.1:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
 
-next-redux-wrapper@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/next-redux-wrapper/-/next-redux-wrapper-2.1.0.tgz#ad5e0abbe3859ea5f9f4c981a76406374c13f64e"
-  integrity sha512-9Z/6bfVxVF+npBAhK5AgjanFe2pAP4UOP1hC/d1kXit0z0Lt84FopI1BxYIGgJLGXctLT4ein2F8pYms8QrnYg==
+next-redux-wrapper@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/next-redux-wrapper/-/next-redux-wrapper-4.0.1.tgz#70f2d83b5bd0fb07ec19e6e70bea6b179d295fd7"
+  integrity sha512-aj9s4VT062hvrU8k2OQevf6iffHSIXpDXtIA8xbLzfpP94h3w7vZCmAJmbmfq3rXignqJT3KG44GODwsCQmdsA==
 
 next-routes@^1.4.2:
   version "1.4.2"

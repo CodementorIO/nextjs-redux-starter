@@ -10,6 +10,7 @@ class SearchRepoContainer extends Component {
   static async getInitialProps ({ store, query }) {
     const lang = query.lang || 'javascript'
     await store.dispatch(getTopRepos({ lang }))
+    return { lang }
   }
 
   componentDidMount () {
