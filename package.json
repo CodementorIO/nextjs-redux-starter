@@ -26,8 +26,8 @@
   "main": "server/index.js",
   "devDependencies": {
     "@babel/core": "^7.1.0",
-    "@testing-library/jest-dom": "^4.0.0",
-    "@testing-library/react": "^9.3.0",
+    "@testing-library/jest-dom": "^5.1.1",
+    "@testing-library/react": "^9.4.1",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.0.0",
