@@ -12,7 +12,7 @@
     "prop-types": "^15.6.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-helmet": "^5.2.1",
+    "react-helmet": "^6.0.0",
     "react-is": "^16.13.1",
     "react-redux": "^7.0.3",
     "redux": "^4.0.1",
