@@ -1,4 +1,5 @@
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
+import { Helmet } from 'react-helmet'
 import withRedux from 'next-redux-wrapper'
 import { Provider } from 'react-redux'
 import styledNormalize from 'styled-normalize'
@@ -16,15 +17,23 @@ const GlobalStyle = createGlobalStyle`
 class MyApp extends App {
   render () {
     const { Component, pageProps, router, store } = this.props
+    const title = 'Hello next.js Real World!'
     return (
-      <ThemeProvider theme={theme}>
-        <Provider store={store}>
-          <GlobalStyle />
-          <Layout>
-            <Component router={router} {...pageProps} />
-          </Layout>
-        </Provider>
-      </ThemeProvider>
+      <>
+        <Helmet>
+          <title>{title}</title>
+          <meta name='viewport' content='width=device-width, initial-scale=1' />
+          <meta property='og:title' content={title} />
+        </Helmet>
+        <ThemeProvider theme={theme}>
+          <Provider store={store}>
+            <GlobalStyle />
+            <Layout>
+              <Component router={router} {...pageProps} />
+            </Layout>
+          </Provider>
+        </ThemeProvider>
+      </>
     )
   }
 }

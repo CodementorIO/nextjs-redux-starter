@@ -1,6 +1,6 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 
 // from https://github.com/zeit/next.js/edit/canary/examples/with-react-helmet/pages/_document.js
 export default class extends Document {
@@ -41,17 +41,6 @@ export default class extends Document {
     return Object.keys(this.props.helmet)
       .filter(el => el !== 'htmlAttributes' && el !== 'bodyAttributes')
       .map(el => this.props.helmet[el].toComponent())
-  }
-
-  get helmetJsx () {
-    const title = 'Hello next.js Real World!'
-    return (
-      <Helmet>
-        <title>{title}</title>
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <meta property='og:title' content={title} />
-      </Helmet>
-    )
   }
 
   render () {
