@@ -9,7 +9,7 @@ Next.js is an awesome and minimalistic framework to make a modern universal reac
 
 ## Features
 - ▲ Based on latest [Next.js](https://github.com/zeit/next.js)
-- 🗄  State management with [redux](https://github.com/reactjs/redux), [react-redux](https://github.com/reactjs/react-redux), and [redux-toolkil](https://github.com/reduxjs/redux-toolkit)
+- 🗄  State management with [redux-toolkit](https://github.com/reduxjs/redux-toolkit)
 - 💅 Styling with [styled-components](https://github.com/styled-components/styled-components)
 - 🐐 Unit testing with [react-testing-library](https://github.com/testing-library/react-testing-library)
 - 🛀 Linting staged changes on [pre-commit](https://github.com/pre-commit/pre-commit) with [standard](https://github.com/standard/standard)
