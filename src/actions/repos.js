@@ -1,4 +1,3 @@
-
 import github from 'libs/github'
 
 export const GET_TOP_REPOS = Symbol('GET_TOP_REPOS')
